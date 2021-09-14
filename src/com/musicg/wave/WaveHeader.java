@@ -129,7 +129,8 @@ public class WaveHeader {
 		
 		// check the format is support
 		if (chunkId.toUpperCase().equals(RIFF_HEADER)
-				&& format.toUpperCase().equals(WAVE_HEADER) && audioFormat == 1) {
+				&& format.toUpperCase().equals(WAVE_HEADER) 
+		                && (audioFormat == 1 || audioFormat == 7) {
 			return true;
 		}
 		else{
